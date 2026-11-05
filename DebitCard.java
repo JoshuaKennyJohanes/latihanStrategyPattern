@@ -55,10 +55,10 @@ public class DebitCard implements PaymentStrategy{
         paymentStrategy.pay(amount);
     }
 
-    
+    @Override
+    public boolean canPay(double amount) {
+        return amount<=10000000;
+    }
 
     
-
-
-
 }

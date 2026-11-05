@@ -70,10 +70,14 @@ public class CreditCard implements PaymentStrategy{
 
             paymentStrategy.pay(amount);
         }
-
-
-
     }
+
+    @Override
+    public boolean canPay(double amount) {
+        return amount <=1000000 && amount >=100000;
+    }
+
+    
 
     
 
