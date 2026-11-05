@@ -26,18 +26,10 @@ public class Wallet implements PaymentStrategy {
     @Override
     public List<AuthorizationMethod> getRequiredAuthorizations() {
         List<AuthorizationMethod> listMethod = new ArrayList<>();
-        listMethod.add(null);
         return listMethod;
     }
 
-    @Override
-    public void processPayment(PaymentStrategy paymentStrategy, double amount) throws Exception {
-        if(!validate(amount)){
-            throw new Exception("Uang mu kurang!");
-        } else {
-            paymentStrategy.pay(amount);
-        }
-    }
+    
 
     @Override
     public boolean canPay(double amount) {
